@@ -22,8 +22,7 @@ https://hanleon.cc/AIText/
 3. **创建访问密钥（SecretId / SecretKey）**  
    - 打开「访问管理（CAM）」 → 「访问密钥」 → 新建密钥  
    - 复制并妥善保管 SecretId 与 SecretKey（后续将在网页端填写）  
-   - ⚠️ 请勿将密钥暴露在前端代码或公开仓库中！
-
+   - 创建业务策略 获取 BizType
 ---
 
 ### 🚀 二、使用步骤
@@ -69,8 +68,9 @@ https://hanleon.cc/AIText/
 | 指标 | 含义 | 建议 |
 |------|------|------|
 | **Score** | AI 模型输出分值 | 越低越好 |
-| **EvilFlag / Keywords** | 内容违规标签与关键词 | 仅在违规时返回 |
-| **SliceCount** | 文件被拆分的段落数量 | 用于文档模式 |
+| **Suggestion** | 是否通过 | Pass/Block/Review |
+| **Label** | 标签 | 正常为Normal/AI文字为GeneratedContentRisk  |
+| **SubLabel** | 文本类型 | AI生成为AITextGenerated  |
 
 ---
 
@@ -83,6 +83,7 @@ https://hanleon.cc/AIText/
 ---
 
 📘 **示例截图：**
+
 <img width="500" alt="image" src="https://github.com/user-attachments/assets/07f11c8e-7b9e-4c4f-987d-3a456d0d76e8" />
 
 ---
