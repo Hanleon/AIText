@@ -28,6 +28,8 @@ https://hanleon.cc/AIText/
    - 复制并妥善保管 SecretId 与 SecretKey（后续将在网页端填写）  
    - 创建业务策略 获取 BizType
   <img width="500" alt="image" src="https://github.com/user-attachments/assets/cb5c83e3-03b9-4867-9c75-417e9f25835c" />
+  <img width="500" alt="image" src="https://github.com/user-attachments/assets/b8d610e4-e27e-4590-b7b7-751aedff1962" />
+
 
 ---
 
