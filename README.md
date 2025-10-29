@@ -1,5 +1,7 @@
 🚀 一个可以读取word文件，检测是否AI文字的在线工具。
 ---
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/8a291a6c-890d-4cd3-b2c0-4a178ab57b7f" />
+---
 测试地址：
 
 https://hanleon.cc/AIText/
