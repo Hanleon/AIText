@@ -22,7 +22,8 @@ https://hanleon.cc/AIText/
 
 3. **创建访问密钥（SecretId / SecretKey）**
    
-   前往 [cam页面](https://console.cloud.tencent.com/cam/capi)
+   前往 [api页面](https://console.cloud.tencent.com/cam/capi)SecretId和SecretKey
+   前往 [cms页面](https://console.cloud.tencent.com/cms)获取BizType
    - 打开「访问管理（CAM）」 → 「访问密钥」 → 新建密钥  
    - 复制并妥善保管 SecretId 与 SecretKey（后续将在网页端填写）  
    - 创建业务策略 获取 BizType
