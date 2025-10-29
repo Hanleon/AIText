@@ -97,3 +97,38 @@ https://hanleon.cc/AIText/
 <img width="500" alt="image" src="https://github.com/user-attachments/assets/07f11c8e-7b9e-4c4f-987d-3a456d0d76e8" />
 
 ---
+
+### 部署到自己服务上
+1. 可以直接复制dist到自己服务器上
+2. 需要设置反向代理，这里用宝塔面板做示例
+```nginx
+# 放在 server { ... } (443/SSL) 内部
+location /tms {
+    # 1) CORS 预检：直接 204 并放行所有头
+    if ($request_method = OPTIONS) {
+        add_header Access-Control-Allow-Origin * always;
+        add_header Access-Control-Allow-Methods "POST, OPTIONS" always;
+        add_header Access-Control-Allow-Headers "*" always;
+        add_header Access-Control-Max-Age 86400 always;
+        return 204;
+    }
+
+    # 2) 反向代理到腾讯云 TMS
+    proxy_pass https://tms.tencentcloudapi.com/;
+
+    # 3) 关键：目标主机头按目标域名走 + SNI
+    proxy_set_header Host tms.tencentcloudapi.com;
+    proxy_ssl_server_name on;
+
+    # 4) 回包时附加 CORS 头（给浏览器看）
+    add_header Access-Control-Allow-Origin * always;
+    add_header Access-Control-Allow-Headers * always;
+    add_header Access-Control-Allow-Methods "POST, OPTIONS" always;
+
+    #（可选）超时/体积等
+    proxy_connect_timeout 30s;
+    proxy_read_timeout 30s;
+    client_max_body_size 10m;
+}
+
+---
