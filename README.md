@@ -1,6 +1,7 @@
 🚀 一个可以读取word文件，检测是否AI文字的在线工具。
 ---
 测试地址：
+
 https://hanleon.cc/AIText/
 ---
 ## 🧭 使用说明（Usage Guide）
@@ -19,10 +20,13 @@ https://hanleon.cc/AIText/
    在控制台搜索 “内容安全（Text Moderation）” 并开通此服务。  
    记录接口域名：`tms.tencentcloudapi.com`  
 
-3. **创建访问密钥（SecretId / SecretKey）**  
+3. **创建访问密钥（SecretId / SecretKey）**
+   前往 [cam页面](https://console.cloud.tencent.com/cam/capi)
    - 打开「访问管理（CAM）」 → 「访问密钥」 → 新建密钥  
    - 复制并妥善保管 SecretId 与 SecretKey（后续将在网页端填写）  
    - 创建业务策略 获取 BizType
+  <img width="500" alt="image" src="https://github.com/user-attachments/assets/cb5c83e3-03b9-4867-9c75-417e9f25835c" />
+
 ---
 
 ### 🚀 二、使用步骤
