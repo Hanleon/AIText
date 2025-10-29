@@ -21,6 +21,7 @@ https://hanleon.cc/AIText/
    记录接口域名：`tms.tencentcloudapi.com`  
 
 3. **创建访问密钥（SecretId / SecretKey）**
+   
    前往 [cam页面](https://console.cloud.tencent.com/cam/capi)
    - 打开「访问管理（CAM）」 → 「访问密钥」 → 新建密钥  
    - 复制并妥善保管 SecretId 与 SecretKey（后续将在网页端填写）  
